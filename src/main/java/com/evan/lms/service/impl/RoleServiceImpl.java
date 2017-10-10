@@ -2,6 +2,8 @@ package com.evan.lms.service.impl;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,7 @@ public class RoleServiceImpl implements RoleService {
 	private RoleRepository roleRepository;
 	
 	
-	public int addRole(Role role) {
+	public int addRole(@Valid Role role) {
 		Role r = roleRepository.saveAndFlush(role);
 		return r.getId();
 	}

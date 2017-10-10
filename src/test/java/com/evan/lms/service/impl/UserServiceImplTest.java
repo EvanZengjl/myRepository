@@ -21,7 +21,12 @@ public class UserServiceImplTest extends BaseTest {
 	
 	@Test
 	public void testAddUser() {
-		User u = new User("dfodhfoh", "fdsofif", "fdsdd", "1380025443", "dgge",2);
+		User u = new User();
+		u.setName("qqqqqqqq");
+		u.setNickName("qqqqqqqq");
+		u.setPassword("12345678");
+		u.setPhone("13598323423");
+		u.setRoleNum(1);
 		
 		userService.addUser(u);
 	}

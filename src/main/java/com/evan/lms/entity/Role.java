@@ -12,10 +12,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import com.evan.lms.validate.annotation.RoleCheck;
 import com.sun.istack.internal.NotNull;
 
 
 @Entity(name="t_role")
+@RoleCheck
 public class Role implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -27,7 +29,7 @@ public class Role implements Serializable{
 	@Column(name="role_num",nullable=false)
 	private int roleNum;
 	
-	@NotNull
+//	@NotNull
 	private String name;
 	
 	private String remark;

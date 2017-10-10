@@ -16,7 +16,7 @@ public class RoleServiceTest extends BaseTest  {
 
 	@Test
 	public void testAddRole() {
-		Role role = new Role(2,"新闻管理员","新闻管理员");
+		Role role = new Role(4,"qqqqeeeeqq","wq");
 		service.addRole(role);
 	}
 	

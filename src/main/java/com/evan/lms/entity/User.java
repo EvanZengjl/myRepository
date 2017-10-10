@@ -14,13 +14,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize
-@JsonNaming(PropertyNamingStrategy.LowerCaseWithUnderscoresStrategy.class)
 @Entity(name="t_user")
 public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -29,18 +31,18 @@ public class User implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
-//	@Length(min=6,max=20,message="用户名长度为6-20个字符串")
+	@Length(min=6,max=20,message="用户名长度为6-20个字符串")
 	private String name;
 	
 	@Column(name="nick_name")
-//	@Length(min=6,max=20,message="姓名长度为6-20个字符串")
+	@Length(min=6,max=20,message="姓名长度为6-20个字符串")
 	private String nickName;
 	
-//	@Length(min=6,max=20,message="密码长度为6-20个字符串")
+	@Length(min=6,max=20,message="密码长度为6-20个字符串")
 //	@Pattern(regexp="^[a-z]|[A-Z]|[0-9]|/_*$",message="密码不符合规范")
 	private String password;
 	
-//	@Pattern(regexp="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$",message="手机号码不符合规范")
+	@Pattern(regexp="^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$",message="手机号码不符合规范")
 	private String phone;
 	
 	private String description;
