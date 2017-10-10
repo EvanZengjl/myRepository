@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService {
 		userRepository.delete(id);
 	}
 
-//	@Cacheable(value="user",keyGenerator="keyGenerator")
+	@Cacheable(value="user",keyGenerator="keyGenerator")
 	public List<User> findUserList() {
 		System.out.println("进入查询");
 		return userRepository.findAll();
@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
 		return userRepository.findUserByNameAndPassword(name, password);
 	}
 	
-//	@Cacheable(value="user",keyGenerator="keyGenerator")
+	@Cacheable(value="user",keyGenerator="keyGenerator")
 	public User getUserByName(String name) {
 		System.out.println("进入查询");
 		return userRepository.findUserByName(name);
