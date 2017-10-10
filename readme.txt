@@ -1,0 +1,1 @@
+一个整合springmvc+JPA+mysql ,整合shiro 的框架，并使用redis进行缓存,
