@@ -1,1 +1,1 @@
-一个整合springmvc+JPA+mysql ,整合shiro 的框架，并使用redis进行缓存,
+一个整合springmvc+JPA+mysql ,整合shiro 的框架，并使用redis进行缓存,往后会继续补充、完善，谢谢关注
